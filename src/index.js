@@ -3,11 +3,42 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Menu from './components/Menu';
+import Contacts from './pages/Contacts';
+import Users from './pages/Users';
+import User from './pages/User';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Menu />
+  },
+  {
+    path: "/users",
+    element: <Users />
+    ,
+  },
+  {
+    path: "/contact-us",
+    element: <Contacts />
+    ,
+  },
+  {
+    path: "/user/:userID",
+    element: <User />
+    ,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider basename="/" router={router}>
+    </RouterProvider>
   </React.StrictMode>
 );
 

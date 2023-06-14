@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  height: 100px;
+  background-color: rgb(67, 240, 96);
+}
+
+ul.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding-top: 40px;
+}
+
+ul.header-menu li {
+  list-style-type: none;
+}
+
+section.contacts {
+  height: 500px;
+  background-color: rgb(226, 109, 109);
+}
+
+section.contacts h1 {
+  text-align: center;
+  padding-top: 100px;
+}
